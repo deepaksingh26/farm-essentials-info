@@ -5,19 +5,19 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 98765 43210", "+91 87654 32109"],
+    details: ["+91 91315 95022"],
     subtext: "Call us for product inquiries",
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@krishimart.com"],
+    details: ["info.krishimart@gmail.com"],
     subtext: "We respond within 24 hours",
   },
   {
     icon: MapPin,
     title: "Address",
-    details: ["123 Agriculture Market", "Near Mandi Road", "Pune, Maharashtra 411001"],
+    details: ["New Town AB Block", "Kolkata, West Bengal"],
     subtext: "Visit our shop",
   },
   {
@@ -91,7 +91,7 @@ const Contact = () => {
             </div>
             <div className="card-elevated rounded-xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.68149612948!2d73.72287843099!3d18.524598532266076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1704900000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58964.77803301498!2d88.41570895!3d22.5958055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b020703c0d%3A0xece6f8e0fc2e1613!2sNew%20Town%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1704900000000!5m2!1sen!2sin"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
@@ -119,7 +119,7 @@ const Contact = () => {
             <div className="card-elevated rounded-xl p-6 inline-block">
               <p className="text-muted-foreground mb-2">For urgent queries, call us directly:</p>
               <p className="font-heading font-bold text-2xl text-primary">
-                +91 98765 43210
+                +91 91315 95022
               </p>
             </div>
           </div>

@@ -67,20 +67,19 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
+            <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">+91 98765 43210</span>
+                <span className="text-primary-foreground/80">+91 91315 95022</span>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span className="text-primary-foreground/80">info@krishimart.com</span>
+                <span className="text-primary-foreground/80">info.krishimart@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  123 Agriculture Market,<br />
-                  Near Mandi Road,<br />
-                  Pune, Maharashtra 411001
+                  New Town AB Block,<br />
+                  Kolkata, West Bengal
                 </span>
               </li>
             </ul>
