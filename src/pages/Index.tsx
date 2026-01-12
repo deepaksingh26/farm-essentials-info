@@ -87,8 +87,8 @@ const Index = () => {
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8"
+                variant="heroOutline"
+                className="font-semibold px-8"
               >
                 <Link to="/contact">Contact Us</Link>
               </Button>
