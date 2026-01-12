@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Leaf, Phone, Mail, MapPin } from "lucide-react";
+import {Phone, Mail, MapPin } from "lucide-react";
+import logo from "../assets/products/file_000000007df471fd89fae42a5650e573.png";
 
 const Footer = () => {
   return (
@@ -8,12 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-primary-foreground flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-primary" />
-              </div>
-              <span className="font-heading font-bold text-xl">KrishiMart</span>
-            </Link>
+             <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="Logo" className="w-20 h-20 rounded-full" />
+            {/* <span className="font-heading font-bold text-lg md:text-xl text-foreground">
+              KrishiMart
+            </span> */}
+          </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Your trusted partner for quality agricultural inputs. Serving farmers with genuine seeds, fertilizers, and crop protection since 2005.
             </p>
@@ -78,8 +79,8 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  New Town AB Block,<br />
-                  Kolkata, West Bengal
+                  Badmer, Rajasthan - 344024<br />
+                  District Headquarters: Barmer
                 </span>
               </li>
             </ul>

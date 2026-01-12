@@ -2,10 +2,20 @@ import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import ProductCard from "@/components/ProductCard";
 import seedsImage from "@/assets/products/seeds.jpg";
+import seedsImage2 from "../assets/products/fodder_seed.png";
+import seedsImage1 from "../assets/products/field_corp_Seed.png";
 import fertilizersImage from "@/assets/products/fertilizers.jpg";
+import fertilizersImage1 from "../assets/products/Organic_fertilizr.png";
+import fertilizersImage2 from "../assets/products/DAP&URIA.png";
 import pesticidesImage from "@/assets/products/pesticides.jpg";
+import pesticidesImage1 from "../assets/products/fungicides.png";
+import pesticidesImage2 from "../assets/products/herbisides.png";
 import cropNutritionImage from "@/assets/products/crop-nutrition.jpg";
 import farmToolsImage from "@/assets/products/farm-tools.jpg";
+import farmtoolsImage1 from "../assets/products/farmtools1.png";
+import farmtoolsImage2 from "../assets/products/farmtools2.png";
+import corpnutritionImage1 from "../assets/products/crop-nutrition1.png";
+import corpnutritionImage2 from "../assets/products/crop-nutrition2.png";
 
 const productCategories = [
   {
@@ -20,13 +30,13 @@ const productCategories = [
           "Premium quality hybrid seeds for tomato, chilli, brinjal, okra, and other vegetables with high disease resistance",
       },
       {
-        image: seedsImage,
+        image: seedsImage1,
         name: "Field Crop Seeds",
         description:
           "Certified seeds for soybean, cotton, wheat, groundnut, and other major field crops",
       },
       {
-        image: seedsImage,
+        image: seedsImage2,
         name: "Fodder Seeds",
         description:
           "Quality fodder and grass seeds for livestock feed production",
@@ -45,13 +55,13 @@ const productCategories = [
           "Balanced NPK formulations (10:26:26, 12:32:16, 19:19:19) for various crop requirements",
       },
       {
-        image: fertilizersImage,
+        image: fertilizersImage1,
         name: "Organic Fertilizers",
         description:
           "Vermicompost, neem cake, and bio-fertilizers for sustainable farming practices",
       },
       {
-        image: fertilizersImage,
+        image: fertilizersImage2,
         name: "DAP & Urea",
         description:
           "Essential nitrogen and phosphorus fertilizers from trusted brands",
@@ -70,13 +80,13 @@ const productCategories = [
           "Broad-spectrum insecticides for controlling sucking pests, caterpillars, and borers",
       },
       {
-        image: pesticidesImage,
+        image: pesticidesImage1,
         name: "Fungicides",
         description:
           "Preventive and curative fungicides for rust, blight, mildew, and other fungal diseases",
       },
       {
-        image: pesticidesImage,
+        image: pesticidesImage2,
         name: "Herbicides",
         description:
           "Pre and post-emergence weedicides for effective weed management in all crops",
@@ -95,13 +105,13 @@ const productCategories = [
           "Zinc, boron, iron, and multi-micronutrient grades for deficiency correction",
       },
       {
-        image: cropNutritionImage,
+        image: corpnutritionImage1,
         name: "Foliar Sprays",
         description:
           "Water-soluble fertilizers and growth promoters for foliar application",
       },
       {
-        image: cropNutritionImage,
+        image: corpnutritionImage2,
         name: "Bio-Stimulants",
         description:
           "Amino acids, humic acid, and seaweed extracts for enhanced plant health",
@@ -120,13 +130,13 @@ const productCategories = [
           "Durable sickles, spades, hoes, rakes, and weeding tools for manual operations",
       },
       {
-        image: farmToolsImage,
+        image: farmtoolsImage1,
         name: "Spraying Equipment",
         description:
           "Manual and battery-operated sprayers, nozzles, and spray accessories",
       },
       {
-        image: farmToolsImage,
+        image: farmtoolsImage2,
         name: "Irrigation Supplies",
         description:
           "Drip irrigation kits, pipes, sprinklers, and water management tools",

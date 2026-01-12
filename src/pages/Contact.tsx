@@ -17,7 +17,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    details: ["New Town AB Block", "Kolkata, West Bengal"],
+    details: [" Badmer, Rajasthan - 344024", "District Headquarters: Barmer"],
     subtext: "Visit our shop",
   },
   {
@@ -91,7 +91,7 @@ const Contact = () => {
             </div>
             <div className="card-elevated rounded-xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58964.77803301498!2d88.41570895!3d22.5958055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b020703c0d%3A0xece6f8e0fc2e1613!2sNew%20Town%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1704900000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57488.7378974322!2d71.36011405556799!3d25.769040200622783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39443aa1e66fbcbf%3A0x846d4779e8aa9869!2sBarmer%2C%20Rajasthan%20344001!5e0!3m2!1sen!2sin!4v1768233381179!5m2!1sen!2sin"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
