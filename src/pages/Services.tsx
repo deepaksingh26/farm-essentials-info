@@ -1,4 +1,12 @@
-import { Sprout, Droplets, Calendar, Bug, BookOpen, Users } from "lucide-react";
+import {
+  Sprout,
+  Droplets,
+  Calendar,
+  Bug,
+  BookOpen,
+  Users,
+} from "lucide-react";
+
 import Layout from "@/components/Layout";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
@@ -8,68 +16,106 @@ const services = [
     icon: Sprout,
     title: "Crop Advisory",
     description:
-      "Expert guidance on crop selection, variety recommendations, and cultivation practices suited to your soil and climate conditions. Our experienced team helps you make informed decisions for better yields.",
+      "Personalized guidance on crop selection, variety choice, and cultivation practices based on your soil, climate, and season for consistently better yields.",
   },
   {
     icon: Droplets,
     title: "Soil Health Guidance",
     description:
-      "Understanding your soil is crucial for successful farming. We provide guidance on soil testing, interpreting results, and recommending appropriate fertilizers and amendments for optimal soil health.",
+      "Expert support in soil testing, nutrient analysis, and long-term soil improvement strategies to maintain fertility and productivity.",
   },
   {
     icon: Calendar,
     title: "Seasonal Farming Tips",
     description:
-      "Stay updated with season-specific recommendations for planting, irrigation, fertilization, and harvesting. We share practical tips based on current weather patterns and crop stages.",
+      "Timely recommendations for planting, irrigation, fertilization, and harvesting aligned with crop stages and local weather conditions.",
   },
   {
     icon: Bug,
-    title: "Pest & Disease Information",
+    title: "Pest & Disease Management",
     description:
-      "Learn to identify common pests and diseases affecting your crops. We provide information on symptoms, prevention measures, and recommended management practices for healthier crops.",
+      "Accurate identification of pests and diseases with preventive and corrective measures to protect crops and reduce losses.",
   },
   {
     icon: BookOpen,
     title: "Product Usage Guidance",
     description:
-      "Proper application is key to product effectiveness. We explain correct dosages, mixing procedures, application timing, and safety precautions for all our agricultural inputs.",
+      "Clear instructions on dosage, application methods, timing, and safety to ensure maximum effectiveness of agricultural inputs.",
   },
   {
     icon: Users,
     title: "Farmer Community Support",
     description:
-      "Connect with fellow farmers and learn from shared experiences. We facilitate knowledge exchange and keep you informed about new products, techniques, and government schemes.",
+      "Knowledge sharing, updates on new technologies, and awareness of government schemes through a strong local farming network.",
   },
 ];
 
 const Services = () => {
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="section-padding bg-muted">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-accent text-primary text-sm font-medium mb-4">
-              Our Services
+      {/* HERO */}
+      <section className="relative overflow-hidden section-padding bg-gradient-to-b from-muted via-background to-background">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-accent/30 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
+        </div>
+
+        <div className="relative container-custom">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-accent text-primary text-sm font-medium mb-6">
+              Trusted Farmer Support
             </span>
-            <h1 className="font-heading font-bold text-4xl md:text-5xl text-foreground mb-6">
-              Supporting Farmers Every Step
+
+            <h1 className="font-heading font-bold text-4xl md:text-6xl text-foreground mb-6 leading-tight">
+              Services That Help Farmers
+              <br className="hidden md:block" />
+              <span className="text-primary">Grow With Confidence</span>
             </h1>
-            <p className="text-muted-foreground text-lg">
-              Beyond quality products, we provide valuable guidance and information to help farmers make better decisions and achieve successful harvests.
+
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
+              We go beyond selling products. Our mission is to empower farmers
+              with expert knowledge, practical solutions, and continuous support
+              for sustainable and profitable farming.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* TRUST STATS */}
+      <section className="py-14">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { label: "Years of Experience", value: "15+" },
+              { label: "Farmers Guided", value: "10,000+" },
+              { label: "Crop Solutions", value: "100+" },
+              { label: "Trusted Brands", value: "25+" },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="rounded-xl bg-muted p-6 hover:bg-accent transition-colors"
+              >
+                <div className="text-3xl font-heading font-bold text-foreground">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-muted-foreground mt-1">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
       <section className="section-padding">
         <div className="container-custom">
           <SectionHeader
-            title="How We Help You"
-            description="Our team of agricultural experts is here to guide you"
+            title="How We Support You"
+            description="Practical, experience-driven services designed for real farming challenges"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
               <ServiceCard
                 key={index}
@@ -82,61 +128,55 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Information Section */}
+      {/* CONSULTATION PANEL */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
             <div>
-              <span className="inline-block px-4 py-1.5 rounded-full bg-accent text-primary text-sm font-medium mb-4">
-                Free Guidance
+              <span className="inline-block px-5 py-2 rounded-full bg-accent text-primary text-sm font-medium mb-6">
+                Free Expert Consultation
               </span>
+
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-6">
-                Expert Advice at Your Fingertips
+                Real Advice. Real Experience.
               </h2>
-              <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Our experienced team is always available to answer your questions and provide practical solutions for your farming challenges. Whether you're dealing with pest issues, nutrient deficiencies, or crop planning, we're here to help.
+
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Farming decisions can be complex. Our experts are here to guide
+                you with honest, field-tested advice — whether it’s choosing the
+                right crop variety, improving soil health, or managing pests.
               </p>
+
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Visit our shop to discuss your farming needs with our experts, or give us a call for quick advice. We believe that informed farmers are successful farmers.
+                Visit us for in-person consultation or call us anytime for
+                practical guidance you can trust.
               </p>
             </div>
-            <div className="card-elevated rounded-xl p-8">
+
+            <div className="relative bg-background rounded-2xl p-10 shadow-md border border-border">
               <h3 className="font-heading font-semibold text-xl mb-6">
-                What You Can Ask Us About
+                Farmers Commonly Ask Us
               </h3>
+
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </span>
-                  <span className="text-muted-foreground">Which variety is best for my land and season?</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </span>
-                  <span className="text-muted-foreground">How to identify and manage pests or diseases?</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </span>
-                  <span className="text-muted-foreground">What fertilizers should I apply and when?</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </span>
-                  <span className="text-muted-foreground">How to improve soil health naturally?</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-primary text-sm font-bold">✓</span>
-                  </span>
-                  <span className="text-muted-foreground">What are the latest farming techniques and products?</span>
-                </li>
+                {[
+                  "Which crop variety suits my land and season?",
+                  "How can I control pests without damaging crops?",
+                  "What nutrients does my soil currently need?",
+                  "How can I increase yield sustainably?",
+                  "Which new farming practices are worth adopting?",
+                ].map((q, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-accent flex items-center justify-center mt-0.5">
+                      <span className="text-primary text-sm font-bold">✓</span>
+                    </span>
+                    <span className="text-muted-foreground">{q}</span>
+                  </li>
+                ))}
               </ul>
             </div>
+
           </div>
         </div>
       </section>
