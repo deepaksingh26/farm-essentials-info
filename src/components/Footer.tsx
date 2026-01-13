@@ -20,13 +20,13 @@ const Footer = () => {
             >
               <img
                 src={logo}
-                alt="Varinda Solutions company logo"
+                alt="Vrinda Solutions company logo"
                 className="w-16 h-16 rounded-full object-contain transition-transform duration-300 group-hover:scale-105"
               />
 
               <div className="leading-tight">
                 <span className="block font-heading font-bold text-lg tracking-wide">
-                  Varinda Solutions
+                  Vrinda Solutions
                 </span>
                 <span className="block text-sm text-primary-foreground/70">
                   Agriculture & Farm Essentials
@@ -107,13 +107,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 opacity-80" />
                 <span className="text-primary-foreground/80">
-                  info.varindasolutions@gmail.com
+                  info.vrindasolutions@gmail.com
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 opacity-80" />
                 <span className="text-primary-foreground/80">
-                  Badmer, Rajasthan – 344024
+                  Barmer, Rajasthan – 344024
                   <br />
                   District Headquarters: Barmer
                 </span>
@@ -125,7 +125,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/20 text-center text-primary-foreground/60 text-sm space-y-2">
           <p>
-            © {new Date().getFullYear()} Varinda Solutions. All rights reserved.
+            © {new Date().getFullYear()} Vrinda Solutions. All rights reserved.
           </p>
           <p>Trusted by farmers across India</p>
           <p className="text-xs">

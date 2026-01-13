@@ -47,7 +47,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in">
               <span className="inline-block px-5 py-2 rounded-full bg-accent text-primary text-sm font-medium mb-6">
-                About Varinda Solutions
+                About Vrinda Solutions
               </span>
 
               <h1 className="font-heading font-bold text-4xl md:text-5xl text-foreground mb-6 leading-tight">
@@ -57,7 +57,7 @@ const About = () => {
               </h1>
 
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Varinda Solutions is a trusted agricultural input supplier
+                Vrinda Solutions is a trusted agricultural input supplier
                 serving farmers since 2005. What began as a small local shop
                 has grown into a reliable resource center for modern and
                 traditional farming needs.
@@ -66,7 +66,7 @@ const About = () => {
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                 We deeply understand the challenges faced by farmers and are
                 committed to delivering genuine seeds, fertilizers, pesticides,
-                and farm tools — always at fair prices.
+                and farm tools at fair and honest prices.
               </p>
 
               <p className="text-muted-foreground text-lg leading-relaxed">

@@ -61,7 +61,7 @@ const Navbar = () => {
               <div className="relative overflow-hidden rounded-full flex items-center justify-center">
                 <img
                   src={logo}
-                  alt="Varinda Solutions Logo"
+                  alt="Vrinda Solutions Logo"
                   className="w-10 h-10 md:w-14 md:h-14 object-contain block"
                 />
 
@@ -71,7 +71,7 @@ const Navbar = () => {
 
               <div className="flex flex-col justify-center leading-none">
                 <span className="font-bold text-lg md:text-xl tracking-tight text-foreground uppercase transition-colors duration-300 group-hover:text-primary">
-                  Varinda Solutions
+                  Vrinda Solutions
                 </span>
                 <span className="text-[10px] md:text-xs tracking-[0.25em] text-muted-foreground font-medium uppercase transition-colors group-hover:text-foreground/80">
                   Agriculture & Farm
