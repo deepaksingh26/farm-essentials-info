@@ -30,7 +30,7 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
-  // Lock body scroll
+  // Lock body scroll when menu open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "unset";
     return () => {
@@ -44,31 +44,32 @@ const Navbar = () => {
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] border-b transition-all duration-300",
+          "h-16 md:h-20 flex items-center",
           scrolled
-            ? "bg-background/80 md:backdrop-blur-xl border-border/40 py-3 shadow-sm"
-            : "bg-transparent border-transparent py-5"
+            ? "bg-background/80 md:backdrop-blur-xl border-border/40 shadow-sm"
+            : "bg-transparent border-transparent"
         )}
       >
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-4 md:px-8 w-full">
           <div className="flex items-center justify-between">
 
-            {/* BRAND WITH SHINE EFFECT */}
+            {/* BRAND */}
             <Link
               to="/"
               className="group relative flex items-center gap-4 z-[110]"
             >
-              <div className="relative overflow-hidden rounded-full">
+              <div className="relative overflow-hidden rounded-full flex items-center justify-center">
                 <img
                   src={logo}
                   alt="Varinda Solutions Logo"
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-contain"
+                  className="w-10 h-10 md:w-14 md:h-14 object-contain block"
                 />
 
-                {/* Subtle shine effect on hover (desktop only) */}
+                {/* Shine effect (desktop hover) */}
                 <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center leading-none">
                 <span className="font-bold text-lg md:text-xl tracking-tight text-foreground uppercase transition-colors duration-300 group-hover:text-primary">
                   Varinda Solutions
                 </span>
@@ -123,7 +124,7 @@ const Navbar = () => {
       <div
         className={cn(
           "fixed inset-0 z-[90] md:hidden",
-          "transition-transform transition-opacity duration-300 ease-out will-change-transform",
+          "transition-transform transition-opacity duration-300 ease-out",
           isOpen
             ? "translate-y-0 opacity-100 pointer-events-auto"
             : "-translate-y-full opacity-0 pointer-events-none"
@@ -134,9 +135,6 @@ const Navbar = () => {
             h-full pt-24 px-4 pb-8
             flex flex-col gap-2
             bg-background
-            md:bg-white/35
-            md:backdrop-blur-xl
-            md:backdrop-saturate-150
             border border-border/40
             shadow-xl
           "
