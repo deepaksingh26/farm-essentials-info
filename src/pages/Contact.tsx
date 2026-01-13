@@ -11,7 +11,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Support",
-    details: ["info.varindasolutions@gmail.com"],
+    details: ["info.vrindasolutions@gmail.com"],
     subtext: "We usually reply within 24 hours",
   },
   {
@@ -41,7 +41,7 @@ const Contact = () => {
         <div className="relative container-custom">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-accent text-primary text-sm font-medium mb-6">
-              Contact Varinda Solutions
+              Contact Vrinda Solutions
             </span>
 
             <h1 className="font-heading font-bold text-4xl md:text-6xl text-foreground mb-6 leading-tight">
@@ -119,7 +119,7 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Varinda Solutions Location"
+                title="Vrinda Solutions Location"
                 className="w-full"
               />
             </div>
@@ -136,8 +136,7 @@ const Contact = () => {
             </h3>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
               From product selection to farming advice, our experienced team is
-              here to support you. Reach out anytime — your success matters to
-              us.
+              here to support you. Reach out anytime. We are here because your success matters.
             </p>
 
             <div className="inline-flex flex-col items-center gap-2">

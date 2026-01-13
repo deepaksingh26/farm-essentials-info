@@ -155,7 +155,7 @@ const Products = () => {
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative overflow-hidden section-padding bg-gradient-to-b from-muted via-background to-background">
+      <section className="relative overflow-hidden py-20 md:section-padding bg-gradient-to-b from-muted via-background to-background">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-accent/30 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
@@ -166,10 +166,12 @@ const Products = () => {
             <span className="inline-block px-5 py-2 rounded-full bg-accent text-primary text-sm font-medium mb-6">
               Our Product Range
             </span>
+
             <h1 className="font-heading font-bold text-4xl md:text-6xl text-foreground mb-6">
               Complete Agricultural
               <span className="block text-primary">Input Solutions</span>
             </h1>
+
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
               Trusted seeds, fertilizers, pesticides, crop nutrition, and
               farming tools — sourced only from authorized and reliable brands.
@@ -179,7 +181,7 @@ const Products = () => {
       </section>
 
       {/* CATEGORY QUICK NAV */}
-      <section className="py-8 border-b border-border sticky top-20 bg-background z-40">
+      <section className="py-6 md:py-8 border-b border-border sticky top-16 md:top-20 bg-background z-40">
         <div className="container-custom">
           <div className="flex flex-wrap justify-center gap-3">
             {productCategories.map((cat) => (
@@ -200,9 +202,11 @@ const Products = () => {
         <section
           key={category.id}
           id={category.id}
-          className={`section-padding ${
-            index % 2 === 1 ? "bg-muted" : "bg-background"
-          }`}
+          className={`
+            py-12 md:section-padding
+            scroll-mt-28 md:scroll-mt-0
+            ${index % 2 === 1 ? "bg-muted" : "bg-background"}
+          `}
         >
           <div className="container-custom">
             <SectionHeader
@@ -210,7 +214,7 @@ const Products = () => {
               description={category.description}
             />
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
               {category.products.map((product, i) => (
                 <ProductCard
                   key={i}
@@ -225,7 +229,7 @@ const Products = () => {
       ))}
 
       {/* TRUST STRIP */}
-      <section className="py-16 bg-accent">
+      <section className="py-14 md:py-16 bg-accent">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -248,12 +252,13 @@ const Products = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="section-padding">
+      <section className="py-14 md:section-padding">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center bg-background border border-border rounded-2xl p-10 shadow-sm">
+          <div className="max-w-4xl mx-auto text-center bg-background border border-border rounded-2xl p-8 md:p-10 shadow-sm">
             <h3 className="font-heading font-semibold text-2xl md:text-3xl mb-4">
               Looking for a Specific Product?
             </h3>
+
             <p className="text-muted-foreground text-lg mb-6">
               We stock products from leading brands like{" "}
               <strong className="text-foreground">
@@ -262,6 +267,7 @@ const Products = () => {
               and many more. Contact us to check availability or get expert
               recommendations.
             </p>
+
             <p className="text-muted-foreground text-sm">
               <strong className="text-foreground">Note:</strong> Availability
               may vary by season and stock.
