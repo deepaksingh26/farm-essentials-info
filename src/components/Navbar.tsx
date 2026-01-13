@@ -18,17 +18,19 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Optimized Scroll Handler with smoother threshold
+  // Scroll detection
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close menu on route change
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  // Lock body scroll
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "unset";
     return () => {
@@ -38,6 +40,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* ================= NAVBAR ================= */}
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-[100] border-b transition-all duration-300",
@@ -49,22 +52,33 @@ const Navbar = () => {
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between">
 
-            <Link to="/" className="flex items-center gap-4 z-[110]">
-              <img
-                src={logo}
-                alt="Varinda Solutions Logo"
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full object-contain"
-              />
-              <div className="leading-tight">
-                <span className="block font-bold text-lg md:text-xl uppercase">
+            {/* BRAND WITH SHINE EFFECT */}
+            <Link
+              to="/"
+              className="group relative flex items-center gap-4 z-[110]"
+            >
+              <div className="relative overflow-hidden rounded-full">
+                <img
+                  src={logo}
+                  alt="Varinda Solutions Logo"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-contain"
+                />
+
+                {/* Subtle shine effect on hover (desktop only) */}
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+
+              <div className="flex flex-col">
+                <span className="font-bold text-lg md:text-xl tracking-tight text-foreground uppercase transition-colors duration-300 group-hover:text-primary">
                   Varinda Solutions
                 </span>
-                <span className="block text-[10px] md:text-xs tracking-[0.25em] text-muted-foreground uppercase">
+                <span className="text-[10px] md:text-xs tracking-[0.25em] text-muted-foreground font-medium uppercase transition-colors group-hover:text-foreground/80">
                   Agriculture & Farm
                 </span>
               </div>
             </Link>
 
+            {/* DESKTOP NAV */}
             <div className="hidden md:flex items-center gap-2">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.path;
@@ -91,6 +105,7 @@ const Navbar = () => {
               })}
             </div>
 
+            {/* MOBILE TOGGLE */}
             <Button
               variant="ghost"
               size="icon"
@@ -104,6 +119,7 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* ================= MOBILE MENU ================= */}
       <div
         className={cn(
           "fixed inset-0 z-[90] md:hidden",
@@ -134,7 +150,9 @@ const Navbar = () => {
                 className={cn(
                   "px-6 py-5 rounded-2xl text-xl font-medium",
                   "transition-transform transition-opacity duration-300",
-                  isOpen ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0",
+                  isOpen
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-4 opacity-0",
                   isActive
                     ? "bg-primary/20 text-primary"
                     : "text-foreground hover:bg-muted"
