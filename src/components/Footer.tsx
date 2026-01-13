@@ -100,15 +100,21 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 opacity-80" />
-                <span className="text-primary-foreground/80">
+                <a 
+                  href="tel:+919131595022" 
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
                   +91 91315 95022
-                </span>
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 opacity-80" />
-                <span className="text-primary-foreground/80">
+                <a 
+                  href="mailto:info.vrindasolutions@gmail.com" 
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
                   info.vrindasolutions@gmail.com
-                </span>
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 opacity-80" />
