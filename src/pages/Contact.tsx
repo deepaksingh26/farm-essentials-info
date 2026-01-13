@@ -6,12 +6,14 @@ const contactInfo = [
     icon: Phone,
     title: "Call Us",
     details: ["+91 91315 95022"],
+    link: "tel:+919131595022",
     subtext: "Quick response for urgent queries",
   },
   {
     icon: Mail,
     title: "Email Support",
     details: ["info.vrindasolutions@gmail.com"],
+    link: "mailto:info.vrindasolutions@gmail.com",
     subtext: "We usually reply within 24 hours",
   },
   {
@@ -78,9 +80,19 @@ const Contact = () => {
 
                 <div className="space-y-1 mb-3">
                   {item.details.map((detail, i) => (
-                    <p key={i} className="text-foreground font-medium">
-                      {detail}
-                    </p>
+                    item.link ? (
+                      <a 
+                        key={i} 
+                        href={item.link} 
+                        className="text-foreground font-medium hover:text-primary transition-colors block"
+                      >
+                        {detail}
+                      </a>
+                    ) : (
+                      <p key={i} className="text-foreground font-medium">
+                        {detail}
+                      </p>
+                    )
                   ))}
                 </div>
 
@@ -143,9 +155,12 @@ const Contact = () => {
               <span className="text-muted-foreground">
                 For urgent assistance, call us directly
               </span>
-              <span className="font-heading font-bold text-3xl text-primary">
+              <a 
+                href="tel:+919131595022" 
+                className="font-heading font-bold text-3xl text-primary hover:scale-105 transition-transform"
+              >
                 +91 91315 95022
-              </span>
+              </a>
             </div>
           </div>
         </div>
